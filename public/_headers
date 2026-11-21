@@ -1,0 +1,15 @@
+# Cache HTML files for 0 seconds in the browser, no allow revalidation in the background on the CDN
+/*.html
+  Cache-Control: no-cache
+
+# Cache CSS files for 0 seconds in the browser, allowing for revalidation in the background on the CDN
+/*.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Cache JS files for 0 seconds in the browser, allowing for revalidation in the background on the CDN
+/*.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Cache image files for 7 days in the browser, allowing for revalidation in the background on the CDN
+/img/*
+  Cache-Control: public, max-age=604800

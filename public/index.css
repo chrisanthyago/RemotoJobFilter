@@ -1,0 +1,347 @@
+:root {
+    --w3-theme-l2: #79BFF8;
+    --w3-theme-l1: #4DAAF6;
+    --w3-text-theme: #2196f3;
+    /* w3-text-light-blue */
+    --w3-text-theme-light: #87CEEB;
+    --text-shadow: 3px 3px 3px black;
+}
+
+html, body {
+    height: 100%;
+    color: #444;
+    line-height: 2.0;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: Lato, Arial, sans-serif;
+}
+
+.w3-wide {
+    letter-spacing: 10px;
+}
+
+.w3-text-theme-light {
+    color: var(--w3-text-theme-light) !important;
+}
+
+.w3-theme-gradient {
+    color: black !important;
+    background: -webkit-linear-gradient(top, var(--w3-theme-l2) 25%, var(--w3-theme-l1) 75%);
+    background: -moz-linear-gradient(top, var(--w3-theme-l2) 25%, var(--w3-theme-l1) 75%);
+    background: -o-linear-gradient(top, var(--w3-theme-l2) 25%, var(--w3-theme-l1) 75%);
+    background: -ms-linear-gradient(top, var(--w3-theme-l2) 25%, var(--w3-theme-l1) 75%);
+    background: linear-gradient(to bottom, var(--w3-theme-l2) 25%, var(--w3-theme-l1) 75%);
+}
+
+.material-symbols-outlined {
+    font-size: inherit;
+    vertical-align: sub;
+}
+
+svg {
+    vertical-align: sub;
+}
+
+.style-width-60 {
+    width: 60%;
+}
+
+.style-width-70 {
+    width: 70%;
+}
+
+.style-width-80 {
+    width: 80%;
+}
+
+.style-width-85 {
+    width: 85%;
+}
+
+.style-width-90 {
+    width: 90%;
+}
+
+.style-width-95 {
+    width: 95%;
+}
+
+.style-width-99 {
+    width: 99%;
+}
+
+/* Create a Parallax Effect */
+div#productHero, div#enterpriseHero, div#productsHero, div#aboutHero, div#contactHero {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
+
+/* First image (Product) */
+div#productHero {
+    background-image: url("./img/product_hero_slider_tech_background_1.webp");
+}
+
+/* Second image (Enterprise) */
+div#enterpriseHero {
+    background-image: url("./img/enterprise_hero_image.webp");
+}
+
+/* Third image (Products Logo) */
+div#productsHero {
+    background-image: url("./img/products_hero_image.webp");
+}
+
+/* Fourth image (About) */
+div#aboutHero {
+    background-image: url("./img/about_hero_image.webp");
+}
+
+/* Fifth image (Contact) */
+div#contactHero {
+    background-image: url("./img/contact_hero_image.webp");
+}
+
+div#navBar > div.w3-col:nth-of-type(1) {
+    /* 501.38 */
+    width: 502px;
+}
+
+div#navBar > div.w3-col:nth-of-type(2) {
+    /* 50 */
+    width: 50px;
+}
+
+div#navBar > div.w3-rest > input[type=text] {
+    /* 77 */
+    width: 77px;
+    padding: 7px 8px;
+}
+
+div#productHero > div.w3-display-left {
+    width: 36%;
+}
+
+div#product > div.w3-cell-row > div.w3-cell-middle > img.w3-image,
+div#product > div.w3-cell-row > div.w3-cell-middle > div.w3-hide-large > img.w3-image {
+    min-width: 260px;
+}
+
+div#enterpriseHero > div.w3-display-left > p {
+    padding: 12px 24px!important;
+}
+
+div#enterpriseHero > div.w3-display-left > p:first-of-type {
+    font-size: 64px!important;
+}
+
+div#enterpriseHero > div.w3-display-left > p:not(:first-of-type) {
+    font-size: 24px!important;
+}
+
+div#enterpriseHero > div.w3-display-left > p:not(:last-of-type) {
+    text-shadow: var(--text-shadow);
+}
+
+div#enterprise > h2.w3-center {
+    font-family: Comfortaa, Arial, sans-serif;
+}
+
+div#enterprise > div.w3-center > div.w3-quarter:hover span.material-symbols-outlined {
+    color: var(--w3-text-theme) !important;
+}
+
+div#enterprise > div.w3-container > div.w3-cell-row:hover div.w3-container > h3 {
+    color: var(--w3-text-theme) !important;
+}
+
+div#enterprise > div.w3-container > div.w3-cell-row > div.w3-cell-middle > img.w3-image {
+    min-width: 360px;
+}
+
+div#enterprise > div.w3-row-padding > div.w3-col > div.w3-card > img.w3-image {
+    width: 100%;
+}
+
+div#enterprise > div.w3-row-padding > div.w3-col > div.w3-card:hover img.w3-image {
+    opacity: 1;
+}
+
+div#enterprise > div.w3-container > div.w3-cell-row > div.w3-container > div:hover p.w3-wide {
+    color: var(--w3-text-theme) !important;
+}
+
+div#enterprise > div.w3-center > div.w3-third {
+    /* Transition for smooth scaling effect */
+    transition: transform 0.3s ease;
+}
+
+div#enterprise > div.w3-center > div.w3-third:hover {
+    /* Scale the div to 1.07 times its original size on hover */
+    transform: scale(1.07);
+}
+
+div#enterprise > div.w3-center > div.w3-third:hover ul.w3-ul > li.w3-theme-l3 {
+    background: -webkit-linear-gradient(top, var(--w3-theme-l2) 25%, var(--w3-theme-l1) 75%);
+    background: -moz-linear-gradient(top, var(--w3-theme-l2) 25%, var(--w3-theme-l1) 75%);
+    background: -o-linear-gradient(top, var(--w3-theme-l2) 25%, var(--w3-theme-l1) 75%);
+    background: -ms-linear-gradient(top, var(--w3-theme-l2) 25%, var(--w3-theme-l1) 75%);
+    background: linear-gradient(to bottom, var(--w3-theme-l2) 25%, var(--w3-theme-l1) 75%);
+}
+
+div#productsHero > div.w3-display-middle > span.w3-jumbo {
+    font-family: Comfortaa, Arial, sans-serif;
+}
+
+div#productsHero > div.w3-display-middle {
+    white-space: nowrap;
+}
+
+div#products > div.w3-container > div.w3-container:hover h3.w3-center {
+    color: var(--w3-text-theme) !important;
+}
+
+div#products > div.w3-container > div.w3-container:hover div.w3-container > img.w3-image {
+    opacity: 1;
+}
+
+div#products > div.w3-container > div.w3-container > div.w3-container > img.w3-image,
+div#products > div.w3-row > div.w3-col > img.w3-image,
+div#products > div.w3-row-padding > div.w3-col > img.w3-image {
+    width: 100%;
+    cursor: pointer;
+}
+
+div#products > div.w3-row > div.w3-col > img.w3-image {
+    margin-bottom: -3px;
+}
+
+div#aboutHero > div.w3-display-middle > span {
+    text-shadow: var(--text-shadow);
+}
+
+div#about > div.w3-center > img.w3-image {
+    width: 480px;
+}
+
+div#about > div.w3-container > div:not([class]):hover p.w3-wide {
+    color: var(--w3-text-theme) !important;
+}
+
+div#about > div.w3-container > div.w3-flex {
+    align-items: center;
+    gap: 16px;
+}
+
+div#about > div.w3-container > div.w3-flex > img.w3-circle {
+    width: 80px;
+    height: 80px;
+}
+
+div#about > div.w3-container > div.w3-flex:hover img.w3-circle {
+    opacity: 1;
+}
+
+div#contactHero > div.w3-display-middle > span {
+    text-shadow: var(--text-shadow);
+}
+
+div#contact > div.w3-flex,
+div#contact > div.w3-flex > div.w3-col > div.w3-flex {
+    align-items: center;
+}
+
+div#contact > div.w3-flex > div.w3-col > img.w3-image {
+    min-width: 602px;
+}
+
+div#contact > div.w3-flex > div.w3-col > div.w3-flex > span.material-symbols-outlined {
+    width: 1em;
+}
+
+div#contact > div.w3-flex > div.w3-col > div.w3-flex:hover span.material-symbols-outlined {
+    color: var(--w3-text-theme) !important;
+}
+
+footer > p > a {
+    font-family: Comfortaa, Arial, sans-serif;
+    text-decoration: none;
+}
+
+body > a#btnGoToTop {
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    z-index: 98;
+}
+
+div#mdlDownload, div#mdlContact, div#mdlSignUp, div#mdlImage {
+    z-index: 99;
+}
+
+@media only screen and (max-width: 992px) {
+    div#enterpriseHero > div.w3-display-left > p {
+        padding: 8px 16px!important;
+    }
+
+    div#enterpriseHero > div.w3-display-left > p:first-of-type {
+        font-size: 48px!important;
+    }
+
+    div#enterprise > div.w3-container > div.w3-cell-row > div.w3-cell-middle > img.w3-image {
+        min-width: 266px;
+    }
+
+    div#about > div.w3-center > img.w3-image {
+        width: 390px;
+    }
+
+    div#contact > div.w3-flex > div.w3-col > img.w3-image {
+        min-width: 258px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    div#navBar > div.w3-col:nth-of-type(1) {
+        /* 67.67 */
+        width: 68px;
+    }
+
+    div#enterpriseHero > div.w3-display-left > p {
+        padding: 4px 8px!important;
+    }
+
+    div#enterpriseHero > div.w3-display-left > p:first-of-type {
+        font-size: 24px!important;
+    }
+
+    div#enterpriseHero > div.w3-display-left > p:not(:first-of-type) {
+        font-size: 18px!important;
+    }
+
+    div#enterpriseHero > div.w3-display-left > p:last-of-type > a.w3-button {
+        margin-top: 16px!important;
+    }
+
+    div#enterprise > div.w3-container > div.w3-cell-row > div.w3-cell-middle > img.w3-image {
+        min-width: 215px;
+    }
+
+    div#about > div.w3-center > img.w3-image {
+        width: 300px;
+    }
+
+    div.w3-modal-content{
+        margin: auto;
+    }
+}
+
+/* Turn off parallax scrolling on small tablets and phones */
+@media only screen and (max-width: 320px) {
+    div#productHero, div#enterpriseHero, div#productsHero, div#aboutHero, div#contactHero {
+        background-attachment: scroll;
+    }
+}

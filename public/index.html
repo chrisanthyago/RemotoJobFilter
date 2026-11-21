@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RemotoJob Filter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="./img/digital_nomad_32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="./img/digital_nomad_16.png" sizes="16x16">
+        <link rel="apple-touch-icon" href="./img/digital_nomad_180.png" sizes="180x180">
+        <link rel="shortcut icon" type="image/x-icon" href="./img/digital_nomad_32.ico">
+        <link rel="preconect" href="https://www.w3schools.com">
+        <link rel="preconect" href="https://fonts.googleapis.com">
+        <link rel="preconect" href="fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Comfortaa:wght@400;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,1,200&display=block">
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div id="navBar" class="w3-bar w3-row w3-text-black">
+                <!-- 501.38 -->
+                <div class="w3-col">
+                    <!-- 67.67 -->
+                    <a href="#product" class="w3-bar-item w3-button w3-hover-theme w3-ripple">Filter</a>
+                    <a href="#enterprise" class="w3-bar-item w3-button w3-hover-theme w3-ripple w3-hide-small">
+                        <span class="material-symbols-outlined w3-large">corporate_fare</span> Enterprise
+                    </a>
+                    <a href="#products" class="w3-bar-item w3-button w3-hover-theme w3-ripple w3-hide-small">
+                        <span class="material-symbols-outlined w3-large">apps</span> Products
+                    </a>
+                    <a href="#about" class="w3-bar-item w3-button w3-hover-theme w3-ripple w3-hide-small">
+                        <span class="material-symbols-outlined w3-large">person</span> About
+                    </a>
+                    <a href="#contact" class="w3-bar-item w3-button w3-hover-theme w3-ripple w3-hide-small">
+                        <span class="material-symbols-outlined w3-large">mail</span> Contact
+                    </a>
+                </div>
+                <div class="w3-col w3-right">
+                    <!-- 50 -->
+                    <a id="btnNavBlock" class="w3-bar-item w3-button w3-hover-theme w3-ripple w3-hide-medium w3-hide-large" title="Toggle Navigation Menu">
+                        <span class="material-symbols-outlined w3-large">menu</span>
+                    </a>
+                    <!-- 50 -->
+                    <a id="btnSearch" class="w3-bar-item w3-button w3-hover-theme w3-ripple w3-hide-small">
+                        <span class="material-symbols-outlined w3-large">search</span>
+                    </a>
+                </div>
+                <div class="w3-rest">
+                    <!-- 77 -->
+                    <input id="txtSearch" type="text" class="w3-bar-item w3-input w3-right w3-border w3-border-theme w3-animate-input w3-hide" name="search" placeholder="Search...">
+                </div>
+            </div>
+
+            <!-- Navbar on small screens -->
+            <!-- color -->
+            <div id="navBlock" class="w3-bar-block w3-white w3-border w3-animate-right w3-hide">
+                <a href="#enterprise" class="w3-bar-item w3-button w3-hover-theme w3-ripple">
+                    <span class="material-symbols-outlined w3-large">corporate_fare</span> Enterprise
+                </a>
+                <a href="#products" class="w3-bar-item w3-button w3-hover-theme w3-ripple">
+                    <span class="material-symbols-outlined w3-large">apps</span> Products
+                </a>
+                <a href="#about" class="w3-bar-item w3-button w3-hover-theme w3-ripple">
+                    <span class="material-symbols-outlined w3-large">person</span> About
+                </a>
+                <a href="#contact" class="w3-bar-item w3-button w3-hover-theme w3-ripple">
+                    <span class="material-symbols-outlined w3-large">mail</span> Contact
+                </a>
+                <a class="w3-bar-item w3-button w3-hover-theme w3-ripple">
+                    <span class="material-symbols-outlined w3-large">search</span> Search
+                </a>
+            </div>
+        </div>
+
+        <!-- First Parallax Image with Slideshow -->
+        <div id="productHero" class="w3-display-container w3-center w3-large w3-animate-opacity">
+            <!-- Download Buttons -->
+            <div class="w3-display-left w3-padding w3-hide-small">
+                <div class="w3-theme-light w3-opacity-min w3-hover-opacity-off w3-padding w3-round-large">
+                    <h4 class="w3-xlarge w3-text-theme">Agile and Efficient</h4>
+                    <hr class="w3-border-theme">
+                    <p>Time savings and extreme efficiency.</p>
+                    <p>
+                        <button class="w3-button w3-block w3-theme-gradient w3-hover-theme w3-padding-large w3-round w3-ripple open-download">
+                            Download <svg class="w3-xlarge" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#chrome"></use></svg>
+                        </button>
+                    </p>
+                </div>
+            </div>
+            <div class="w3-display-left w3-padding w3-hide-small">
+                <div class="w3-theme-light w3-opacity-min w3-hover-opacity-off w3-padding w3-round-large">
+                    <!-- color -->
+                    <h4 class="w3-xlarge w3-text-green">Tailored and Direct</h4>
+                    <hr class="w3-border-green">
+                    <p>Complete customization of the search.</p>
+                    <p>
+                        <button class="w3-button w3-block w3-green w3-text-black w3-hover-green w3-padding-large w3-round w3-ripple open-download">
+                            Download <svg class="w3-xlarge" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#chrome"></use></svg>
+                        </button>
+                    </p>
+                </div>
+            </div>
+            <div class="w3-display-left w3-padding w3-hide-small">
+                <div class="w3-theme-light w3-opacity-min w3-hover-opacity-off w3-padding w3-round-large">
+                    <!-- color -->
+                    <h4 class="w3-xlarge w3-text-red">Intuitive and Practical</h4>
+                    <hr class="w3-border-red">
+                    <p>Smart job market discovery.</p>
+                    <p>
+                        <button class="w3-button w3-block w3-red w3-text-black w3-hover-red w3-padding-large w3-round w3-ripple open-download">
+                            Download <svg class="w3-xlarge" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#chrome"></use></svg>
+                        </button>
+                    </p>
+                </div>
+            </div>
+            <button class="w3-display-left w3-button w3-theme-gradient w3-hover-theme w3-margin-left w3-padding-large w3-round w3-ripple open-download w3-hide-medium w3-hide-large">
+                Download <svg class="w3-xlarge" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#chrome"></use></svg>
+            </button>
+
+            <!-- Take Tour Buttons -->
+            <div class="w3-display-right w3-padding w3-hide-small">
+                <div class="w3-opacity-min w3-hover-opacity-off">
+                    <button class="w3-button w3-theme-gradient w3-hover-theme w3-padding-large w3-round w3-ripple">
+                        Take Tour <span class="material-symbols-outlined w3-xlarge">single_arrow</span>
+                    </button>
+                </div>
+            </div>
+            <div class="w3-display-right w3-padding w3-hide-small">
+                <div class="w3-opacity-min w3-hover-opacity-off">
+                    <!-- color -->
+                    <button class="w3-button w3-green w3-text-black w3-hover-green w3-padding-large w3-round w3-ripple">
+                        Take Tour <span class="material-symbols-outlined w3-xlarge">single_arrow</span>
+                    </button>
+                </div>
+            </div>
+            <div class="w3-display-right w3-padding w3-hide-small">
+                <div class="w3-opacity-min w3-hover-opacity-off">
+                    <!-- color -->
+                    <button class="w3-button w3-red w3-text-black w3-hover-red w3-padding-large w3-round w3-ripple">
+                        Take Tour <span class="material-symbols-outlined w3-xlarge">single_arrow</span>
+                    </button>
+                </div>
+            </div>
+            <button class="w3-display-bottommiddle w3-button w3-block w3-theme-gradient w3-hover-theme w3-padding-large w3-ripple w3-hide-medium w3-hide-large">
+                Take Tour <span class="material-symbols-outlined w3-xlarge">single_arrow</span>
+            </button>
+        </div>
+
+        <!-- Container (App Section) -->
+        <div id="product" class="w3-auto w3-container w3-padding-64">
+            <h1 class="w3-center w3-xxxlarge w3-bold">RemotoJob Filter</h1>
+            <!-- The App Section -->
+            <div class="w3-cell-row">
+                <div class="w3-container w3-mobile w3-cell w3-cell-middle">
+                    <h2 class="w3-xxlarge w3-bold">The App</h2>
+                    <!-- color -->
+                    <h3 class="w3-xlarge w3-text-green w3-bold">Why get it?</h3>
+                    <p class="w3-justify"><span class="w3-large">Stop wasting hours scrolling</span> through irrelevant job postings. Filter for RemotoJob empowers remote professionals to instantly curate and sort listings by their exact expertise using an intuitive overlay. Eliminate clutter, focus only on roles that match your professional skillset, and accelerate your job search with seamless filtering designed to put your career growth first.</p>
+                    <button class="w3-button w3-theme-gradient w3-hover-theme w3-section w3-padding-large w3-ripple open-download w3-hide-small w3-hide-medium">
+                        <span class="material-symbols-outlined w3-large">cloud_download</span> Download Application
+                    </button>
+                    <p>Available for <svg class="w3-text-theme w3-xlarge" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#chrome"></use></svg></p>
+                </div>
+                <div class="w3-container w3-mobile w3-cell w3-cell-middle">
+                    <img src="./img/product_value_proposition_1.webp" loading="lazy" class="w3-image w3-round-large w3-hide-small w3-hide-medium" alt="Application" width="896" height="1200">
+                    <div class="w3-hide-large">
+                        <img src="./img/product_value_proposition_1.webp" loading="lazy" class="w3-image w3-round-large" alt="Application" width="896" height="1200">
+                        <button class="w3-button w3-block w3-theme-gradient w3-hover-theme w3-margin-top w3-padding-large w3-ripple open-download">
+                            <span class="material-symbols-outlined w3-large">cloud_download</span> Download App...
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Accuracy Section -->
+            <div class="w3-cell-row w3-margin-top">
+                <div class="w3-container w3-mobile w3-cell w3-cell-middle">
+                    <img src="./img/product_value_proposition_2.webp" loading="lazy" class="w3-image w3-round-large w3-hide-small" alt="Application" width="896" height="1200">
+                </div>
+                <div class="w3-container w3-mobile w3-cell w3-cell-middle">
+                    <h2 class="w3-xxlarge w3-bold">Accuracy</h2>
+                    <!-- color -->
+                    <h3 class="w3-xlarge w3-text-red w3-bold">Guesswork, who?</h3>
+                    <p class="w3-justify"><span class="w3-large">Connect with your ideal career opportunities faster</span>, streamline your daily workflow, and land your next remote role with unprecedented precision, absolute ease, and total confidence. Our dynamic interface adapts instantly to your preferences—sorting skills by frequency or alphabet, clearing filters on the fly, and refreshing live job feeds—ensuring you never miss a hidden gem in the remote job market.</p>
+                </div>
+            </div>
+            <!-- Features Section -->
+            <div class="w3-center w3-margin-top">
+                <h2 class="w3-xxlarge w3-bold">Features</h2>
+                <p><span class="w3-large">This app is just so precise, dynamic and agile.</span></p>
+                <div class="w3-row w3-padding-48">
+                    <div class="w3-col s4 m3 l2">
+                        <span class="material-symbols-outlined w3-jumbo w3-text-black">my_location</span>
+                        <p>Precise</p>
+                    </div>
+                    <div class="w3-col s4 m3 l2">
+                        <span class="material-symbols-outlined w3-jumbo w3-text-amber">electric_bolt</span>
+                        <p>Dynamic</p>
+                    </div>
+                    <div class="w3-col s4 m3 l2">
+                        <span class="material-symbols-outlined w3-jumbo w3-text-blue">cached</span>
+                        <p>Agile</p>
+                    </div>
+                    <div class="w3-col s4 m3 l2">
+                        <span class="material-symbols-outlined w3-jumbo w3-text-green">encrypted</span>
+                        <p>Reliable</p>
+                    </div>
+                    <div class="w3-col s4 m3 l2">
+                        <span class="material-symbols-outlined w3-jumbo w3-text-light-blue">chess_pawn</span>
+                        <p>Strategic</p>
+                    </div>
+                    <div class="w3-col s4 m3 l2">
+                        <span class="material-symbols-outlined w3-jumbo w3-text-grey">tune</span>
+                        <p>Customizable</p>
+                    </div>
+                    <div class="w3-col s4 m3 l2">
+                        <span class="material-symbols-outlined w3-jumbo w3-text-light-green">airwave</span>
+                        <p>Smooth</p>
+                    </div>
+                    <div class="w3-col s4 m3 l2">
+                        <span class="material-symbols-outlined w3-jumbo w3-text-orange">emoji_objects</span>
+                        <p>Insightful</p>
+                    </div>
+                    <div class="w3-col s4 m3 l2">
+                        <span class="material-symbols-outlined w3-jumbo w3-text-red">target</span>
+                        <p>Accurate</p>
+                    </div>
+                    <div class="w3-col s4 m3 l2">
+                        <span class="material-symbols-outlined w3-jumbo w3-text-cyan">wand_stars</span>
+                        <p>Intuitive</p>
+                    </div>
+                    <div class="w3-col s4 m3 l2">
+                        <span class="material-symbols-outlined w3-jumbo w3-text-indigo">speed</span>
+                        <p>Fast</p>
+                    </div>
+                    <div class="w3-col s4 m3 l2">
+                        <span class="material-symbols-outlined w3-jumbo w3-text-dark-grey">lock</span>
+                        <p>Safe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Parallax Image with Enterprise Logo -->
+        <!-- color -->
+        <div id="enterpriseHero" class="w3-display-container w3-text-white">
+            <div class="w3-display-left">
+                <p>Build Without Limits. Scale Without Compromise.</p>
+                <p class="w3-hide-small">Empower your enterprise with high-performance architecture, military-grade security, and seamless API integrations.<span class="w3-hide-medium"> Engineered by expert full-stack teams to deliver lightning-fast speeds, absolute reliability, and zero technical debt.</span></p>
+                <p>
+                    <a href="#enterprise" class="w3-button w3-theme-gradient w3-hover-theme w3-padding-large w3-round w3-ripple">Get Started Today</a>
+                    <a href="#products" class="w3-button w3-theme-gradient w3-hover-theme w3-padding-large w3-round w3-ripple">Explore Our Technology</a>
+                </p>
+            </div>
+            <div class="w3-display-bottomleft w3-xxlarge w3-padding-large">
+                <svg class="w3-opacity-min w3-hover-opacity-off" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#facebook"></use></svg>
+                <svg class="w3-opacity-min w3-hover-opacity-off" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#instagram"></use></svg>
+                <svg class="w3-opacity-min w3-hover-opacity-off" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#snapchat"></use></svg>
+                <svg class="w3-opacity-min w3-hover-opacity-off" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#pinterest"></use></svg>
+                <svg class="w3-opacity-min w3-hover-opacity-off" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#twitter"></use></svg>
+                <svg class="w3-opacity-min w3-hover-opacity-off" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#linkedin"></use></svg>
+            </div>
+        </div>
+
+        <!-- Container (Enterprise Section) -->
+        <div id="enterprise" class="w3-auto w3-container w3-padding-64">
+            <!-- About Section -->
+            <h2 class="w3-center w3-xxxlarge w3-wide w3-bold">e<span class="w3-text-theme">xp</span>erta</h2>
+            <p class="w3-center w3-large">Your requirement, in development.</p>
+            <br>
+            <br>
+            <h3 class="w3-center w3-bold">About The Enterprise</h3>
+            <p class="w3-center w3-large">Key features of our enterprise.</p>
+            <div class="w3-center w3-row-padding w3-padding-64">
+                <div class="w3-quarter">
+                    <span class="material-symbols-outlined w3-jumbo w3-text-theme-light">rocket_launch</span>
+                    <p class="w3-large w3-bold">Scalability & Performance</p>
+                    <p>Scale effortlessly without limits. Our high-performance architecture guarantees lightning-fast speeds and rock-solid stability even during massive traffic spikes.</p>
+                </div>
+                <div class="w3-quarter">
+                    <span class="material-symbols-outlined w3-jumbo w3-text-theme-light">security</span>
+                    <p class="w3-large w3-bold">Security & Compliance</p>
+                    <p>Protect your critical data with advanced military-grade encryption, strict global compliance standards, and automated threat defenses you can trust.</p>
+                </div>
+                <div class="w3-quarter">
+                    <span class="material-symbols-outlined w3-jumbo w3-text-theme-light">auto_awesome_mosaic</span>
+                    <p class="w3-large w3-bold">UX/UI Excellence</p>
+                    <p>Delight users with an intuitive, beautifully crafted interface designed to eliminate friction and maximize productivity from day one.</p>
+                </div>
+                <div class="w3-quarter">
+                    <span class="material-symbols-outlined w3-jumbo w3-text-theme-light">webhook</span>
+                    <p class="w3-large w3-bold">Integrations & API-First</p>
+                    <p>Connect your entire digital ecosystem instantly using our powerful, open APIs to seamlessly automate daily workflows across apps.</p>
+                </div>
+            </div>
+            <!-- Promo Section - "We know architecture" -->
+            <div class="w3-container">
+                <div class="w3-cell-row w3-theme-light w3-padding-64">
+                    <div class="w3-container w3-mobile w3-cell w3-cell-middle">
+                        <h3>We know architecture.</h3>
+                        <p>Experience low latency and massive throughput with our high performance architecture. Engineered for extreme workloads, it guarantees seamless scalability, blazing execution, and absolute reliability across your critical enterprise software applications.</p>
+                        <p>
+                            <a href="#products" class="w3-button w3-theme-gradient w3-hover-theme w3-padding-large w3-ripple">
+                                <span class="material-symbols-outlined w3-large">extension</span> View Our Products
+                            </a>
+                        </p>
+                    </div>
+                    <div class="w3-container w3-mobile w3-cell w3-cell-middle">
+                        <img src="./img/enterprise_blurb_h1.webp" loading="lazy" class="w3-image w3-round-large" alt="High-Performance Enterprise Architecture" width="1200" height="896">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <!-- Team Section -->
+            <h3 class="w3-center w3-bold">The Team</h3>
+            <p class="w3-center w3-large">The ones who runs this company.</p>
+            <div class="w3-row-padding w3-padding-64">
+                <div class="w3-col s12 m6 l3 w3-margin-bottom">
+                    <div class="w3-card">
+                        <img src="./img/enterprise_team_ceo.webp" loading="lazy" class="w3-image w3-opacity-min" alt="Chris" width="1200" height="896">
+                        <div class="w3-container">
+                            <h3>Christian Pichucho</h3>
+                            <p class="w3-opacity">CEO & Founder</p>
+                            <p>Leads corporate vision, strategic partnerships, funding, and overall business growth.</p>
+                            <p>
+                                <button class="w3-button w3-block w3-theme-gradient w3-hover-theme w3-padding-large w3-ripple">
+                                    <span class="material-symbols-outlined w3-large">mail</span> Contact
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-bottom">
+                    <div class="w3-card">
+                        <img src="./img/enterprise_team_cto.webp" loading="lazy" class="w3-image w3-opacity-min" alt="Alan" width="1200" height="896">
+                        <div class="w3-container">
+                            <h3>Alan Mathison Turing</h3>
+                            <p class="w3-opacity">CTO</p>
+                            <p>Drives scalable technical strategy, robust architectural innovation, and R&D excellence.&nbsp;&nbsp;</p><!-- non-breaking space -->
+                            <p>
+                                <button class="w3-button w3-block w3-theme-gradient w3-hover-theme w3-padding-large w3-ripple">
+                                    <span class="material-symbols-outlined w3-large">mail</span> Contact
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-bottom">
+                    <div class="w3-card">
+                        <img src="./img/enterprise_team_cpo.webp" loading="lazy" class="w3-image w3-opacity-min" alt="Grace" width="1200" height="896">
+                        <div class="w3-container">
+                            <h3>Grace Murray Hopper</h3>
+                            <p class="w3-opacity">CPO</p>
+                            <p>Owns product roadmap, user experience requirement, market fit, and user value delivery.</p>
+                            <p>
+                                <button class="w3-button w3-block w3-theme-gradient w3-hover-theme w3-padding-large w3-ripple">
+                                    <span class="material-symbols-outlined w3-large">mail</span> Contact
+                                </button></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-bottom">
+                    <div class="w3-card">
+                        <img src="./img/enterprise_team_em.webp" loading="lazy" class="w3-image w3-opacity-min" alt="Margaret" width="1200" height="896">
+                        <div class="w3-container">
+                            <h3>Margaret Elaine Hamilton</h3>
+                            <p class="w3-opacity">Engineering Manager</p>
+                            <p>Manages development teams, team culture, delivery pipelines, and technical execution.</p>
+                            <p>
+                                <button class="w3-button w3-block w3-theme-gradient w3-hover-theme w3-padding-large w3-ripple">
+                                    <span class="material-symbols-outlined w3-large">mail</span> Contact
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Skills Section -->
+            <div class="w3-container">
+                <div class="w3-cell-row w3-theme-light w3-padding-64">
+                    <div class="w3-container w3-mobile w3-cell w3-cell-middle">
+                        <h3>Our skills.</h3>
+                        <p>Engineered for peak performance, our team designs robust architectures, writes clean scalable code, executes automated testing, and automates continuous deployment pipelines.</p>
+                        <p>This expertise guarantees rock-solid reliability, prevents regressions, and accelerates secure feature delivery across global cloud environments.</p>
+                        <p>Using modern frameworks and rigorous principles, our full-stack engineers deliver robust solutions without technical debt.</p>
+                    </div>
+                    <div class="w3-container w3-mobile w3-cell w3-cell-middle">
+                        <div>
+                            <p class="w3-wide">
+                                <span class="material-symbols-outlined w3-xlarge">hub</span> System Architecture & Scalability
+                            </p>
+                            <div class="w3-theme-l4">
+                                <div class="w3-container w3-theme-gradient w3-center style-width-99">99%</div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="w3-wide">
+                                <span class="material-symbols-outlined w3-xlarge">code_xml</span> Full-Stack Development & Clean Code
+                            </p>
+                            <div class="w3-theme-l4">
+                                <div class="w3-container w3-theme-gradient w3-center style-width-95">95%</div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="w3-wide">
+                                <span class="material-symbols-outlined w3-xlarge">select_check_box</span> Cybersecurity & Data Management
+                            </p>
+                            <div class="w3-theme-l4">
+                                <div class="w3-container w3-theme-gradient w3-center style-width-90">90%</div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="w3-wide">
+                                <span class="material-symbols-outlined w3-xlarge">manufacturing</span> Automation & DevOps
+                            </p>
+                            <div class="w3-theme-l4">
+                                <div class="w3-container w3-theme-gradient w3-center style-width-85">85%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Parallax Image with Logo Text -->
+        <div id="productsHero" class="w3-display-container">
+            <div class="w3-display-middle">
+                <!-- color -->
+                <span class="w3-jumbo w3-white w3-wide w3-bold w3-padding-large w3-animate-opacity">e<span class="w3-text-theme">xp</span>erta</span>
+            </div>
+        </div>
+
+        <!-- Container (Products Section) -->
+        <div id="products" class="w3-auto w3-container w3-padding-64">
+            <h3 class="w3-center w3-text-black">Our Products</h3>
+            <p class="w3-center"><em>Here are a few examples of what we've done for people.</em><br>Click on the images to make them bigger.</p>
+            <br>
+
+            <!-- Products portfolio -->
+            <div class="w3-container">
+                <div class="w3-container w3-card w3-center w3-theme-light w3-padding-64">
+                    <h3 class="w3-center">RemotoJob Filter (Chrome Extension) v1.0</h3>
+                    <div class="w3-container">
+                        <img src="./img/products_remoto_job_filter.webp" loading="lazy" class="w3-image w3-round-large w3-opacity-min" alt="Responsive Mockup of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                    </div>
+                    <div class="w3-row-padding">
+                        <div class="w3-col m6 w3-margin-top">
+                            <a href="https://www.w3schools.com/w3css/tryw3css_templates_band.htm" target="_blank" class="w3-button w3-block w3-theme-gradient w3-hover-theme w3-padding-large w3-ripple">
+                                <span class="material-symbols-outlined w3-large">visibility</span> View Demo
+                            </a>
+                        </div>
+                        <div class="w3-col m6 w3-margin-top">
+                            <a href="https://www.w3schools.com/w3css/tryit.asp?filename=tryweb_band_full" target="_blank" class="w3-button w3-block w3-theme-gradient w3-hover-theme w3-padding-large w3-ripple">
+                                <span class="material-symbols-outlined w3-large">code_blocks</span> Try it Yourself
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="w3-container">
+                <div class="w3-container w3-card w3-center w3-theme-light w3-padding-64">
+                    <h3 class="w3-center">Live Sports Streaming (Webapp) v1.0</h3>
+                    <div class="w3-container">
+                        <img src="./img/products_live_sports_streaming.webp" loading="lazy" class="w3-image w3-round-large w3-opacity-min" alt="Responsive Mockup of the Live Sports Streaming (Webapp) v1.0" width="1376" height="768">
+                    </div>
+                    <div class="w3-row-padding">
+                        <div class="w3-col m6 w3-margin-top">
+                            <a href="https://www.w3schools.com/w3css/tryw3css_templates_blog.htm" target="_blank" class="w3-button w3-block w3-theme-gradient w3-hover-theme w3-padding-large w3-ripple">
+                                <span class="material-symbols-outlined w3-large">visibility</span> View Demo
+                            </a>
+                        </div>
+                        <div class="w3-col m6 w3-margin-top">
+                            <a href="https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_blog" target="_blank" class="w3-button w3-block w3-theme-gradient w3-hover-theme w3-padding-large w3-ripple">
+                                <span class="material-symbols-outlined w3-large">code_blocks</span> Try it Yourself
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <!-- Image Grid 1 -->
+            <div class="w3-row w3-container w3-padding-top-48">
+                <div class="w3-col s12 m4 l3 w3-opacity-min w3-hover-opacity-off w3-hide">
+                    <img src="./img/product_unique_value_proposition.webp" loading="lazy" class="w3-image" alt="Unique Value Proposition Image (neumorphism) of the RemotoJob Filter (Chrome Extension) v1.0" width="896" height="1200">
+                </div>
+                <div class="w3-col s12 m4 l3 w3-opacity-min w3-hover-opacity-off w3-hide">
+                    <img src="./img/product_value_proposition_1.webp" loading="lazy" class="w3-image" alt="Value Proposition 1 Image (isolated floating elements) of the RemotoJob Filter (Chrome Extension) v1.0" width="896" height="1200">
+                </div>
+                <div class="w3-col s12 m4 l3 w3-opacity-min w3-hover-opacity-off w3-hide">
+                    <img src="./img/product_value_proposition_2.webp" loading="lazy" class="w3-image" alt="Value Proposition 2 Image (isolated floating elements) of the RemotoJob Filter (Chrome Extension) v1.0" width="896" height="1200">
+                </div>
+                <div class="w3-col s12 m4 l3 w3-opacity-min w3-hover-opacity-off w3-hide">
+                    <img src="./img/enterprise_blurb_v.webp" loading="lazy" class="w3-image" alt="Blurb image: High-Performance Enterprise Architecture" width="896" height="1200">
+                </div>
+                <div class="w3-col s12 m4 l3 w3-opacity-min w3-hover-opacity-off w3-hide">
+                    <img src="./img/product_value_proposition_floating_elements_1.webp" loading="lazy" class="w3-image" alt="Value Proposition 1 Image (floating elements) of the RemotoJob Filter (Chrome Extension) v1.0" width="896" height="1200">
+                </div>
+                <div class="w3-col s12 m4 l3 w3-opacity-min w3-hover-opacity-off w3-hide">
+                    <img src="./img/product_value_proposition_floating_elements_2.webp" loading="lazy" class="w3-image" alt="Value Proposition 2 Image (floating elements) of the RemotoJob Filter (Chrome Extension) v1.0" width="896" height="1200">
+                </div>
+                <div class="w3-col s12 m4 l3 w3-opacity-min w3-hover-opacity-off w3-hide">
+                    <img src="./img/product_value_proposition_floating_screen_1.webp" loading="lazy" class="w3-image" alt="Value Proposition 1 Image (floating screen) of the RemotoJob Filter (Chrome Extension) v1.0" width="896" height="1200">
+                </div>
+                <div class="w3-col s12 m4 l3 w3-opacity-min w3-hover-opacity-off w3-hide">
+                    <img src="./img/product_value_proposition_floating_screen_2.webp" loading="lazy" class="w3-image" alt="Value Proposition 2 Image (floating screen) of the RemotoJob Filter (Chrome Extension) v1.0" width="896" height="1200">
+                </div>
+                <div class="w3-col s12 m4 l3 w3-opacity-min w3-hover-opacity-off w3-hide">
+                    <img src="./img/product_value_proposition_glass_panel_1.webp" loading="lazy" class="w3-image" alt="Value Proposition 1 Image (glass panel) of the RemotoJob Filter (Chrome Extension) v1.0" width="896" height="1200">
+                </div>
+                <div class="w3-col s12 m4 l3 w3-opacity-min w3-hover-opacity-off w3-hide">
+                    <img src="./img/product_value_proposition_glass_panel_2.webp" loading="lazy" class="w3-image" alt="Value Proposition 2 Image (glass panel) of the RemotoJob Filter (Chrome Extension) v1.0" width="896" height="1200">
+                </div>
+                <div class="w3-col s12 m4 l3 w3-opacity-min w3-hover-opacity-off w3-hide">
+                    <img src="./img/product_value_proposition_isometric_view_1.webp" loading="lazy" class="w3-image" alt="Value Proposition 1 Image (isometric view) of the RemotoJob Filter (Chrome Extension) v1.0" width="896" height="1200">
+                </div>
+                <div class="w3-col s12 m4 l3 w3-opacity-min w3-hover-opacity-off w3-hide">
+                    <img src="./img/product_value_proposition_isometric_view_2.webp" loading="lazy" class="w3-image" alt="Value Proposition 2 Image (isometric view) of the RemotoJob Filter (Chrome Extension) v1.0" width="896" height="1200">
+                </div>
+            </div>
+            <div class="w3-center w3-padding-top-32">
+                <button id="btnLoad" class="w3-button w3-theme-gradient w3-hover-theme w3-padding-large w3-ripple">
+                    <span class="material-symbols-outlined w3-large">download_for_offline</span> Load more
+                </button>
+            </div>
+            <br>
+
+            <!-- Photo Grid 2 -->
+            <div class="w3-row-padding w3-center w3-padding-top-32">
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_tech_background_1.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 1 (deep gradient tech abstract background) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_tech_background_2.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 2 (deep gradient tech abstract background) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_tech_background_3.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 3 (deep gradient tech abstract background) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/enterprise_hero_image.webp" loading="lazy" class="w3-image" alt="Hero Image of the Enterprise" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/products_hero_image.webp" loading="lazy" class="w3-image" alt="Hero Image of the Enterprise Products" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/about_hero_image.webp" loading="lazy" class="w3-image" alt="Hero Image of About Section" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/contact_hero_image.webp" loading="lazy" class="w3-image" alt="Hero Image of Contact Section" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/products_remoto_job_filter.webp" loading="lazy" class="w3-image" alt="Responsive Mockup of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/products_live_sports_streaming.webp" loading="lazy" class="w3-image" alt="Responsive Mockup of the Live Sports Streaming (Webapp) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_blue_white_1.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 1 (royal blue and crisp white background) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_blue_white_2.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 2 (royal blue and crisp white background) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_blue_white_3.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 3 (royal blue and crisp white background) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_metallized_1.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 1 (skeuomorphism) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_metallized_2.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 2 (skeuomorphism) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_metallized_3.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 3 (skeuomorphism) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_neon_glow_1.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 1 (neon glow) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_neon_glow_2.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 2 (neon glow) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_neon_glow_3.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 3 (neon glow) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_neumorphism_1.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 1 (neumorphism) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_neumorphism_2.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 2 (neumorphism) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_neumorphism_3.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 3 (neumorphism) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_pastel_tech_1.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 1 (pastel tech gradient) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_pastel_tech_2.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 2 (pastel tech gradient) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+                <div class="w3-col s12 m6 l3 w3-margin-top w3-hover-opacity">
+                    <img src="./img/product_hero_slider_pastel_tech_3.webp" loading="lazy" class="w3-image" alt="Hero Slider Image 3 (pastel tech gradient) of the RemotoJob Filter (Chrome Extension) v1.0" width="1376" height="768">
+                </div>
+            </div>
+            <div class="w3-center w3-padding-32">
+                <div class="w3-bar">
+                    <button class="w3-bar-item w3-button w3-hover-theme w3-ripple">&laquo;</button><!-- « -->
+                    <button class="w3-bar-item w3-button w3-hover-theme w3-ripple">1</button>
+                    <button class="w3-bar-item w3-button w3-hover-theme w3-ripple">2</button>
+                    <button class="w3-bar-item w3-button w3-hover-theme w3-ripple">3</button>
+                    <button class="w3-bar-item w3-button w3-hover-theme w3-ripple">4</button>
+                    <button class="w3-bar-item w3-button w3-hover-theme w3-ripple">5</button>
+                    <button class="w3-bar-item w3-button w3-hover-theme w3-ripple">6</button>
+                    <button class="w3-bar-item w3-button w3-hover-theme w3-ripple">&raquo;</button><!-- » -->
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <!-- Fourth Parallax Image with About Text -->
+        <div id="aboutHero" class="w3-display-container">
+            <div class="w3-display-middle">
+                <!-- color -->
+                <span class="w3-xxxlarge w3-text-white w3-wide w3-bold">ABOUT</span>
+            </div>
+        </div>
+
+        <!-- Container (About Section) -->
+        <div id="about" class="w3-auto w3-container w3-padding-64">
+            <div class="w3-center">
+                <h3 class="w3-text-black">Christian Santiago Pichucho</h3>
+                <p><em>Software Engineer and Data Scientist.</em><br>Passionate about developing functional products that solve business problems and drive better decision-making.</p>
+                <br>
+                <img src="./img/about_headshot.webp" loading="lazy" class="w3-image w3-round-large">
+            </div>
+            <div class="w3-row w3-container w3-justify">
+                <div class="w3-col m6 w3-padding">
+                    <p>Combining the roles of a Software Engineer and a Data Scientist offers unmatched strategic advantages to any modern tech enterprise. By bridging the gap between robust application development and advanced analytical insights, this dual professional builds solutions that are not only high-performing and scalable, but also deeply data-driven. Instead of relying on guesswork, products are intelligently shaped to anticipate user behavior, automate complex decisions, and optimize operational efficiency. This seamless synergy eliminates traditional communication silos between engineering and data teams, drastically accelerating time-to-market. Ultimately, this professional translates raw data into tangible strategic value, empowering the company to increase profitability, reduce overhead costs, and continuously deliver functional digital products that solve real business problems and drive better decision-making across all levels.</p>
+                </div>
+                <div class="w3-col m6 w3-padding w3-hide-small">
+                    <p>As a versatile technologist, I truly thrive on designing, developing, and maintaining large-scale applications, websites, backend systems, and distributed architectures. Passionate about writing clean, modular, scalable, and fault-tolerant code, my ultimate satisfaction comes from seeing programs run swiftly and securely while being utilized by thousands or millions of users. Working fluidly with languages like Java, JavaScript, Python, or C#, along with version control, databases, and cloud platforms, I build rock-solid infrastructure. Simultaneously, I possess a deep passion for diving into massive volumes of information to uncover hidden insights, applying statistical models, probability, and number theory. By training predictive algorithms and utilizing Python, SQL, or R libraries, I effortlessly transform complex datasets into powerful foresight.</p>
+                </div>
+            </div>
+            <hr class="w3-border-theme">
+            <!-- Tech Stack -->
+            <div class="w3-container">
+                <h4 class="w3-text-black w3-padding-16">Technical Skills</h4>
+                <div>
+                    <p class="w3-wide">
+                        <span class="material-symbols-outlined w3-xlarge">account_tree</span> Advanced Distributed Systems & Cloud Architecture
+                    </p>
+                    <div class="w3-theme-l4">
+                        <div class="w3-container w3-theme-gradient w3-center style-width-60">60%</div>
+                    </div>
+                </div>
+                <div>
+                    <p class="w3-wide">
+                        <span class="material-symbols-outlined w3-xlarge">code_blocks</span> Full-Stack Engineering & Clean Code
+                    </p>
+                    <div class="w3-theme-l4">
+                        <div class="w3-container w3-theme-gradient w3-center style-width-80">80%</div>
+                    </div>
+                </div>
+                <div>
+                    <p class="w3-wide">
+                        <span class="material-symbols-outlined w3-xlarge">list_alt</span> DevOps, Automation & CI/CD Pipelines
+                    </p>
+                    <div class="w3-theme-l4">
+                        <div class="w3-container w3-theme-gradient w3-center style-width-80">80%</div>
+                    </div>
+                </div>
+                <div>
+                    <p class="w3-wide">
+                        <span class="material-symbols-outlined w3-xlarge">finance_mode</span> Strategic Data Translation & Business Value
+                    </p>
+                    <div class="w3-theme-l4">
+                        <div class="w3-container w3-theme-gradient w3-center style-width-60">60%</div>
+                    </div>
+                </div>
+                <div>
+                    <p class="w3-wide">
+                        <span class="material-symbols-outlined w3-xlarge">neurology</span> Predictive Machine Learning & Algorithms
+                    </p>
+                    <div class="w3-theme-l4">
+                        <div class="w3-container w3-theme-gradient w3-center style-width-60">60%</div>
+                    </div>
+                </div>
+                <div>
+                    <p class="w3-wide">
+                        <span class="material-symbols-outlined w3-xlarge">monitoring</span> Applied Statistics & Mathematical Modeling
+                    </p>
+                    <div class="w3-theme-l4">
+                        <div class="w3-container w3-theme-gradient w3-center style-width-70">70%</div>
+                    </div>
+                </div>
+                <div>
+                    <p class="w3-wide">
+                        <span class="material-symbols-outlined w3-xlarge">database_search</span> Advanced Data Engineering & Querying
+                    </p>
+                    <div class="w3-theme-l4">
+                        <div class="w3-container w3-theme-gradient w3-center style-width-90">90%</div>
+                    </div>
+                </div>
+                <div class="w3-row w3-center w3-margin-top">
+                    <div class="w3-quarter w3-theme-l4 w3-hover-text-theme w3-margin-top">
+                        <span class="w3-xlarge">14+</span><br>Tech Partners
+                    </div>
+                    <div class="w3-quarter w3-theme-l4 w3-hover-text-theme w3-margin-top">
+                        <span class="w3-xlarge">55+</span><br>Projects Done
+                    </div>
+                    <div class="w3-quarter w3-theme-l4 w3-hover-text-theme w3-margin-top">
+                        <span class="w3-xlarge">89+</span><br>Clients Served
+                    </div>
+                    <div class="w3-quarter w3-theme-l4 w3-hover-text-theme w3-margin-top">
+                        <span class="w3-xlarge">150+</span><br>Commits
+                    </div>
+                </div>
+                <div class="w3-section">
+                    <button class="w3-button w3-theme-gradient w3-hover-theme w3-section w3-padding-large w3-ripple">
+                        <span class="material-symbols-outlined w3-large">cloud_download</span> Download <span class="w3-hide-small">Resume</span><span class="w3-hide-medium w3-hide-large">CV</span>
+                    </button>
+                </div>
+            </div>
+            <hr class="w3-border-theme">
+            <!-- Testimonials -->
+            <div class="w3-container">
+                <h4 class="w3-text-black w3-padding-16">My Reputation</h4>
+                <div class="w3-flex">
+                    <img src="./img/about_headshot_ada_lovelace.webp" loading="lazy" class="w3-circle w3-opacity-min" alt="Avatar">
+                    <div>
+                        <p><span class="w3-large w3-text-black">Ada Lovelace.</span> First Programmer.</p>
+                        <p>The Analytical Engine has no pretensions whatever to originate anything. It can do whatever we know how to order it to perform.</p>
+                    </div>
+                </div>
+                <div class="w3-flex">
+                    <img src="./img/about_headshot_alan_turing.webp" loading="lazy" class="w3-circle w3-opacity-min" alt="Avatar">
+                    <div>
+                        <p><span class="w3-large w3-text-black">Alan Turing.</span> Turing Machine Creator.</p>
+                        <p>If a machine can think, it might think more intelligently than we do, and then where should we be?</p>
+                    </div>
+                </div>
+                <div class="w3-flex">
+                    <img src="./img/about_headshot_grace_hopper.webp" loading="lazy" class="w3-circle w3-opacity-min" alt="Avatar">
+                    <div>
+                        <p><span class="w3-large w3-text-black">Grace Hopper.</span> First Compiler Creator.</p>
+                        <p>Leadership is a two-way street, loyalty up and loyalty down. Respect for one’s superiors; care for one’s crew.</p>
+                    </div>
+                </div>
+                <div class="w3-flex">
+                    <img src="./img/about_headshot_john_backus.webp" loading="lazy" class="w3-circle w3-opacity-min" alt="Avatar">
+                    <div>
+                        <p><span class="w3-large w3-text-black">John Backus.</span> IBM FORTRAN Team Leader.</p>
+                        <p>You need the willingness to fail all the time.</p>
+                    </div>
+                </div>
+                <div class="w3-flex">
+                    <img src="./img/about_headshot_john_mccarthy.webp" loading="lazy" class="w3-circle w3-opacity-min" alt="Avatar">
+                    <div>
+                        <p><span class="w3-large w3-text-black">John McCarthy.</span> Lisp Creator.</p>
+                        <p>I don't see that human intelligence is something that humans can never understand.</p>
+                    </div>
+                </div>
+                <div class="w3-flex">
+                    <img src="./img/about_headshot_dennis_ritchie.webp" loading="lazy" class="w3-circle w3-opacity-min" alt="Avatar">
+                    <div>
+                        <p><span class="w3-large w3-text-black">Dennis Ritchie.</span> C&nbsp;Creator.</p><!-- non-breaking space -->
+                        <p>The only way to learn a new programming language is by writing programs in it.</p>
+                    </div>
+                </div>
+                <div class="w3-flex">
+                    <img src="./img/about_headshot_ken_thompson.webp" loading="lazy" class="w3-circle w3-opacity-min" alt="Avatar">
+                    <div>
+                        <p><span class="w3-large w3-text-black">Ken Thompson.</span> C&nbsp;Creator.</p><!-- non-breaking space -->
+                        <p>When in doubt, use brute force.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+
+        <!-- Fifth Parallax Image with Contact Text -->
+        <div id="contactHero" class="w3-display-container">
+            <div class="w3-display-middle">
+                <!-- color -->
+                <span class="w3-xxxlarge w3-text-white w3-wide w3-bold">CONTACT</span>
+            </div>
+        </div>
+
+        <!-- Container (Contact Section) -->
+        <div id="contact" class="w3-auto w3-container w3-padding-64">
+            <h3 class="w3-center w3-text-black">Where I Work</h3>
+            <p class="w3-center"><em>I'd love your feedback!</em><br>Do you want me to develop for you?</p>
+            <br>
+
+            <div class="w3-row-padding w3-flex w3-padding">
+                <div class="w3-col w3-hide-small">
+                    <img src="img/contact_quito.webp" loading="lazy" class="w3-image w3-round-large" alt="Quito" width="612" height="406">
+                </div>
+                <div class="w3-col w3-large">
+                    <div class="w3-row w3-flex w3-padding-small">
+                        <span class="material-symbols-outlined w3-col w3-xlarge w3-text-theme-light">location_on</span>
+                        <div class="w3-col w3-margin-left">Quito, Ec</div>
+                    </div>
+                    <div class="w3-row w3-flex w3-padding-small">
+                        <span class="material-symbols-outlined w3-col w3-xlarge w3-text-theme-light">person</span>
+                        <div class="w3-col w3-margin-left">Christian Santiago Pichucho</div>
+                    </div>
+                    <div class="w3-row w3-flex w3-padding-small">
+                        <span class="material-symbols-outlined w3-col w3-xlarge w3-text-theme-light">mail</span>
+                        <div class="w3-col w3-margin-left">chrisanthyago.<wbr>developer@<wbr>gmail.<wbr>com</div><!-- word-break-opportunity -->
+                    </div>
+                    <div class="w3-row w3-flex w3-padding-small">
+                        <span class="material-symbols-outlined w3-col w3-xlarge w3-text-theme-light">call</span>
+                        <div class="w3-col w3-margin-left">+593 99 293 8855</div>
+                    </div>
+                </div>
+            </div>
+            <p class="w3-justify w3-margin">
+                Swing by for a mug of &#x1F37A;, or whatever, fill out the form and fill me in with the details:<!-- 🍺 -->
+            </p>
+            <form>
+                <div class="w3-row-padding">
+                    <div class="w3-half w3-margin-top">
+                        <input
+                            class="w3-input w3-border w3-border-theme"
+                            type="text"
+                            name="Name"
+                            placeholder="Name"
+                            pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+"
+                            title="Only letters and spaces are allowed in the name field."
+                            minlength="2"
+                            maxlength="50"
+                            required>
+                    </div>
+                    <div class="w3-half w3-section">
+                        <input
+                            class="w3-input w3-border w3-border-theme"
+                            type="text"
+                            name="LastName"
+                            placeholder="Last name"
+                            pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+"
+                            title="Only letters and spaces are allowed in the last name field."
+                            minlength="2"
+                            maxlength="50"
+                            required>
+                    </div>
+                </div>
+                <div class="w3-row-padding">
+                    <div class="w3-col">
+                        <input
+                            class="w3-input w3-margin-bottom w3-border w3-border-theme"
+                            type="email"
+                            name="Email"
+                            placeholder="Email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            title="Please enter a valid email address."
+                            minlength="5"
+                            maxlength="50"
+                            required>
+                    </div>
+                    <div class="w3-col">
+                        <input
+                            class="w3-input w3-margin-bottom w3-border w3-border-theme"
+                            type="text"
+                            name="Subject"
+                            placeholder="Subject"
+                            minlength="5"
+                            maxlength="100"
+                            required>
+                    </div>
+                    <div class="w3-col">
+                        <textarea
+                            class="w3-input w3-margin-bottom w3-border w3-border-theme"
+                            type="text"
+                            name="Message"
+                            placeholder="Message"
+                            minlength="10"
+                            maxlength="500"
+                            rows="3"
+                            cols="50"
+                            required></textarea>
+                    </div>
+                </div>
+                <button
+                    type="submit"
+                    class="w3-button w3-right w3-theme-gradient w3-hover-theme w3-section w3-margin-right w3-padding-large w3-ripple">
+                    <span class="material-symbols-outlined w3-large">send</span> Send Message
+                </button>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-center w3-theme-dark w3-padding-64 w3-opacity-min w3-hover-opacity-off">
+            <div class="w3-xxlarge w3-section">
+                <svg class="w3-opacity-min w3-hover-opacity-off" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#facebook"></use></svg>
+                <svg class="w3-opacity-min w3-hover-opacity-off" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#instagram"></use></svg>
+                <svg class="w3-opacity-min w3-hover-opacity-off" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#snapchat"></use></svg>
+                <svg class="w3-opacity-min w3-hover-opacity-off" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#pinterest"></use></svg>
+                <svg class="w3-opacity-min w3-hover-opacity-off" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#twitter"></use></svg>
+                <svg class="w3-opacity-min w3-hover-opacity-off" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#linkedin"></use></svg>
+            </div>
+            <p class="w3-xlarge w3-opacity-min w3-hover-opacity-off">
+                Powered by <a href="#enterpriseHero" class="w3-xxlarge w3-text-black w3-hover-text-theme w3-bold" title="eXPerta">e<spam class="w3-text-theme">xp</spam>erta</a>
+            </p>
+        </footer>
+
+        <!-- Go to top button -->
+        <a id="btnGoToTop" href="#" class="w3-button w3-text-theme w3-hover-theme w3-ripple w3-hide" title="Go to top">
+            <span class="material-symbols-outlined">change_history</span>
+        </a>
+
+        <!-- Modal for download app -->
+        <div id="mdlDownload" class="w3-modal w3-animate-opacity w3-padding-16">
+            <div class="w3-modal-content w3-padding-large">
+                <div class="w3-container">
+                    <button class="w3-button w3-display-topright w3-text-theme w3-hover-theme w3-xlarge w3-ripple" title="Close Window">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                    <h2 class="w3-text-theme w3-wide">DOWN<wbr>LOAD</h2><!-- word-break-opportunity -->
+                    <svg class="w3-text-theme w3-xlarge" fill="currentColor" width="1em" height="1em"><use href="./img/sprite.svg#chrome"></use></svg>
+                    <p>Download The RemotoJob Filter (Chrome Extension) v1.0.</p>
+                    <form action="https://www.w3schools.com/action_page.php" target="_blank">
+                        <div class="w3-row-padding w3-stretch">
+                            <div class="w3-half w3-margin-top">
+                                <input
+                                    class="w3-input w3-border w3-border-theme"
+                                    type="text"
+                                    name="Name"
+                                    placeholder="Name"
+                                    pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+"
+                                    title="Only letters and spaces are allowed in the name field."
+                                    minlength="2"
+                                    maxlength="50"
+                                    required>
+                            </div>
+                            <div class="w3-half w3-section">
+                                <input
+                                    class="w3-input w3-border w3-border-theme"
+                                    type="text"
+                                    name="LastName"
+                                    placeholder="Last name"
+                                    pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+"
+                                    title="Only letters and spaces are allowed in the last name field."
+                                    minlength="2"
+                                    maxlength="50"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="w3-row-padding w3-stretch">
+                            <div class="w3-col">
+                                <input
+                                    class="w3-input w3-margin-bottom w3-border w3-border-theme"
+                                    type="email"
+                                    name="Email"
+                                    placeholder="Email"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                    title="Please enter a valid email address."
+                                    minlength="5"
+                                    maxlength="50"
+                                    required>
+                            </div>
+                        </div>
+                        <button
+                            type="submit"
+                            class="w3-button w3-block w3-theme-gradient w3-hover-theme w3-section w3-padding-large w3-ripple">
+                            <span class="material-symbols-outlined w3-large">cloud_download</span> Download App
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for contact to -->
+        <div id="mdlContact" class="w3-modal w3-animate-opacity w3-padding-16">
+            <div class="w3-modal-content w3-padding-large">
+                <div class="w3-container">
+                    <button class="w3-button w3-display-topright w3-text-theme w3-hover-theme w3-xlarge w3-ripple" title="Close Window">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                    <h2 class="w3-text-theme w3-wide">CON<wbr>TACT</h2><!-- word-break-opportunity -->
+                    <span class="w3-text-theme w3-xlarge"><span class="material-symbols-outlined w3-xxlarge">person</span><span>&nbsp;</span>Webmaster</span><!-- non-breaking space -->
+                    <p>Fill out the form and fill me in with the details:</p>
+                    <form action="https://www.w3schools.com/action_page.php" target="_blank">
+                        <div class="w3-row-padding w3-stretch">
+                            <div class="w3-half w3-margin-top">
+                                <input
+                                    class="w3-input w3-border w3-border-theme"
+                                    type="text"
+                                    name="Name"
+                                    placeholder="Name"
+                                    pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+"
+                                    title="Only letters and spaces are allowed in the name field."
+                                    minlength="2"
+                                    maxlength="50"
+                                    required>
+                            </div>
+                            <div class="w3-half w3-section">
+                                <input
+                                    class="w3-input w3-border w3-border-theme"
+                                    type="text"
+                                    name="LastName"
+                                    placeholder="Last name"
+                                    pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+"
+                                    title="Only letters and spaces are allowed in the last name field."
+                                    minlength="2"
+                                    maxlength="50"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="w3-row-padding w3-stretch">
+                            <div class="w3-col">
+                                <input
+                                    class="w3-input w3-margin-bottom w3-border w3-border-theme"
+                                    type="email"
+                                    name="Email"
+                                    placeholder="Email"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                    title="Please enter a valid email address."
+                                    minlength="5"
+                                    maxlength="50"
+                                    required>
+                            </div>
+                            <div class="w3-col">
+                                <input
+                                    class="w3-input w3-margin-bottom w3-border w3-border-theme"
+                                    type="text"
+                                    name="Subject"
+                                    placeholder="Subject"
+                                    minlength="5"
+                                    maxlength="100"
+                                    required>
+                            </div>
+                            <div class="w3-col">
+                                <textarea
+                                    class="w3-input w3-margin-bottom w3-border w3-border-theme"
+                                    type="text"
+                                    name="Message"
+                                    placeholder="Message"
+                                    minlength="10"
+                                    maxlength="500"
+                                    rows="3"
+                                    cols="50"
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <button
+                            type="submit"
+                            class="w3-button w3-block w3-theme-gradient w3-hover-theme w3-section w3-padding-large w3-ripple">
+                            <span class="material-symbols-outlined w3-large">send</span> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for full size images on click-->
+        <div id="mdlImage" class="w3-modal w3-theme-dark w3-padding-64">
+            <button class="w3-button w3-display-topright w3-hover-theme w3-xlarge w3-ripple" title="Close Image">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="w3-modal-content w3-center w3-transparent w3-animate-zoom">
+                <img id="imgImage" loading="lazy" class="w3-image">
+                <p id="pImage" class="w3-opacity-min w3-large"></p>
+            </div>
+        </div>
+
+        <script src="./index.js"></script>
+    </body>
+</html>
