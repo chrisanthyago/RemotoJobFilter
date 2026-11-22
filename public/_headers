@@ -1,5 +1,5 @@
-# Cache HTML files for 0 seconds in the browser, no allow revalidation in the background on the CDN
-/*.html
+# Cache index.html must be revalidated in the browser, no allow revalidation in the background on the CDN
+/
   Cache-Control: no-cache
 
 # Cache CSS files for 0 seconds in the browser, allowing for revalidation in the background on the CDN

@@ -17,6 +17,7 @@ document.getElementById("about").querySelectorAll("div > div.w3-row-padding > di
 document.getElementById("contact").querySelector("form").addEventListener("submit", sendMessage);
 document.getElementById("mdlDownload").querySelector("button").addEventListener("click", () => toggleDisplayById("mdlDownload"));
 document.getElementById("mdlContact").querySelector("button").addEventListener("click", () => toggleDisplayById("mdlContact"));
+document.getElementById("mdlContact").querySelector("form").addEventListener("submit", sendMessage);
 document.getElementById("mdlImage").querySelector("button").addEventListener("click", () => toggleDisplayById("mdlImage"));
 
 // Slideshow
@@ -219,15 +220,18 @@ async function sendMessage(event) {
     event.preventDefault();
     const form = event.target;
     const formData = new FormData(form);
-    const button = form.querySelector("button[type='submit']");
+    const btnClose = form.parentElement.firstElementChild;
+    const spanContact = form.previousElementSibling.previousElementSibling;
+    const contact = spanContact instanceof HTMLSpanElement ? spanContact.lastChild.textContent : "Webmaster";
+    const btnSubmit = form.querySelector("button[type='submit']");
 
     formData.append("FechaHora", new Date().toISOString().slice(0, 19));
-    formData.append("Contact", "Webmaster");
-    button.classList.add("w3-disabled");
-    button.innerHTML = button.innerHTML.replace("Send Message", "Sending message...");
+    formData.append("Contact", contact);
+    btnSubmit.classList.add("w3-disabled");
+    btnSubmit.innerHTML = btnSubmit.innerHTML.replace("Send Message", "Sending message...");
 
     try {
-        const response = await fetch("/send/message", {
+        const response = await fetch("/messages/send", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(Object.fromEntries(formData.entries()))
@@ -241,14 +245,17 @@ async function sendMessage(event) {
             throw new Error(`Failed to get a successful response from endpoint with: ${response.status} ${response.statusText}. ${error}`);
         }
 
+        if (btnClose instanceof HTMLButtonElement) {
+            btnClose.click();
+        }
         form.reset();
     } catch (error) {
-        error.message = `Error processing the '/send/message' endpoint: ${error.message} \nTry again later or report this issue to the admin.`;
+        error.message = `Error processing the '/messages/send' endpoint: ${error.message} \nTry again later or report this issue to the admin.`;
         console.error(error);
         alert(`${error.message}`);
     } finally {
-        button.classList.remove("w3-disabled");
-        button.innerHTML = button.innerHTML.replace("Sending message...", "Send Message");
+        btnSubmit.classList.remove("w3-disabled");
+        btnSubmit.innerHTML = btnSubmit.innerHTML.replace("Sending message...", "Send Message");
     }
 }
 
