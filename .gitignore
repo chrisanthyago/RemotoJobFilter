@@ -5,4 +5,4 @@
 .env
 
 # Ignore notes and documentation file
-README.md
+notes.md

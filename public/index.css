@@ -82,27 +82,27 @@ div#productHero, div#enterpriseHero, div#productsHero, div#aboutHero, div#contac
 
 /* First image (Product) */
 div#productHero {
-    background-image: url("./img/product_hero_slider_tech_background_1.webp");
+    background-image: url('./img/product_hero_slider_tech_background_1.webp');
 }
 
 /* Second image (Enterprise) */
 div#enterpriseHero {
-    background-image: url("./img/enterprise_hero_image.webp");
+    background-image: url('./img/enterprise_hero_image.webp');
 }
 
 /* Third image (Products Logo) */
 div#productsHero {
-    background-image: url("./img/products_hero_image.webp");
+    background-image: url('./img/products_hero_image.webp');
 }
 
 /* Fourth image (About) */
 div#aboutHero {
-    background-image: url("./img/about_hero_image.webp");
+    background-image: url('./img/about_hero_image.webp');
 }
 
 /* Fifth image (Contact) */
 div#contactHero {
-    background-image: url("./img/contact_hero_image.webp");
+    background-image: url('./img/contact_hero_image.webp');
 }
 
 div#navBar > div.w3-col:nth-of-type(1) {

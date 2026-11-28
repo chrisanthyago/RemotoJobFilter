@@ -8,6 +8,7 @@ document.getElementById("productHero").querySelectorAll("div.w3-display-right > 
 document.getElementById("product").querySelectorAll("button.open-download").forEach(item => item.addEventListener("click", () => toggleDisplayById("mdlDownload")));
 document.getElementById("enterprise").querySelectorAll("div.w3-row-padding > div.w3-col > div.w3-card > div.w3-container").forEach(item => item.lastElementChild.addEventListener("click", () => openModalContact(item.firstElementChild.textContent)));
 document.getElementById("enterprise").querySelectorAll("div.w3-center > div.w3-third > ul.w3-ul").forEach(item => item.lastElementChild.firstElementChild.addEventListener("click", () => openModalSignUp(item.firstElementChild.textContent)));
+document.getElementById("products").querySelectorAll("button.open-download").forEach(item => item.addEventListener("click", () => toggleDisplayById("mdlDownload")));
 document.getElementById("products").querySelectorAll("img").forEach(item => item.addEventListener("click", () => openModalImage(item)));
 document.getElementById("products").querySelector("div.w3-center > button.w3-button").addEventListener("click", () => loadMore());
 document.getElementById("products").querySelector("div.w3-center > div.w3-bar > button.w3-bar-item:first-of-type").addEventListener("click", () => showPage(pageIndex - 1));
@@ -16,6 +17,7 @@ document.getElementById("products").querySelector("div.w3-center > div.w3-bar > 
 document.getElementById("about").querySelectorAll("div > div.w3-row-padding > div.w3-half > ul.w3-ul").forEach(item => item.lastElementChild.firstElementChild.addEventListener("click", () => openModalSignUp(item.firstElementChild.textContent)));
 document.getElementById("contact").querySelector("form").addEventListener("submit", sendMessage);
 document.getElementById("mdlDownload").querySelector("button").addEventListener("click", () => toggleDisplayById("mdlDownload"));
+document.getElementById("mdlDownload").querySelector("form").addEventListener("submit", sendDownload);
 document.getElementById("mdlContact").querySelector("button").addEventListener("click", () => toggleDisplayById("mdlContact"));
 document.getElementById("mdlContact").querySelector("form").addEventListener("submit", sendMessage);
 document.getElementById("mdlImage").querySelector("button").addEventListener("click", () => toggleDisplayById("mdlImage"));
@@ -107,6 +109,7 @@ function loadMore() {
 
     if (hiddenImages.length <= pageSize) {
         btnLoadMore.disabled = true;
+        btnLoadMore.classList.add("w3-disabled");
     }
 }
 
@@ -213,6 +216,70 @@ function searchText(a) {
 }
 
 /**
+ * Handles the form submission event for sending a download request. It prevents the default form submission behavior, collects the form data, appends additional information (current date and time), and sends the data to the server asynchronously using the Fetch API. It also provides feedback to the user by disabling the submit button and updating its text while the request is being sent.
+ * @param {Event} event - The event object representing the form submission event. It is used to prevent the default form submission behavior and handle the form data asynchronously.
+ */
+async function sendDownload(event) {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    const btnClose = form.parentElement.firstElementChild;
+    const btnSubmit = form.querySelector("button[type='submit']");
+
+    formData.append("FechaHora", new Date().toISOString().slice(0, 19));
+    btnClose.disabled = true;
+    btnClose.classList.add("w3-disabled");
+    btnSubmit.disabled = true;
+    btnSubmit.classList.add("w3-disabled");
+    btnSubmit.innerHTML = btnSubmit.innerHTML.replace("Download App", "Sending request...");
+
+    try {
+        const response = await fetch("/downloads/send", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(Object.fromEntries(formData.entries()))
+            // body: formData
+            // body: new URLSearchParams(formData)
+        });
+        if (response.ok) {
+            const fileName = response.headers.get("Content-Disposition")?.split("filename=")[1]?.replace(/"/g, "") || "RemotoJobFilter.zip";
+            const data = await response.blob();
+            const objectURL = URL.createObjectURL(data);
+
+            const a = document.createElement("a");
+            a.href = objectURL;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            setTimeout(() => URL.revokeObjectURL(objectURL), 1000);
+        } else {
+            const data = await response.text();
+            const error = data ? `\n${data}` : "";
+            throw new Error(`Failed to get a successful response from endpoint with: ${response.status} ${response.statusText}. ${error}`);
+        }
+
+        btnClose.disabled = false;
+        btnClose.classList.remove("w3-disabled");
+        btnClose.click();
+        form.reset();
+
+    } catch (error) {
+        error.message = `Frontend: Error processing the '/downloads/send' endpoint: ${error.message} \nTry again later or report this issue to the admin.`;
+        console.error(error);
+        alert(`${error.message}`);
+
+    } finally {
+        btnClose.disabled = false;
+        btnClose.classList.remove("w3-disabled");
+        btnSubmit.disabled = false;
+        btnSubmit.classList.remove("w3-disabled");
+        btnSubmit.innerHTML = btnSubmit.innerHTML.replace("Sending request...", "Download App");
+    }
+}
+
+/**
  * Handles the form submission event for sending a message. It prevents the default form submission behavior, collects the form data, appends additional information (current date and time, contact), and sends the data to the server asynchronously using the Fetch API. It also provides feedback to the user by disabling the submit button and updating its text while the message is being sent.
  * @param {Event} event - The event object representing the form submission event. It is used to prevent the default form submission behavior and handle the form data asynchronously.
  */
@@ -227,6 +294,11 @@ async function sendMessage(event) {
 
     formData.append("FechaHora", new Date().toISOString().slice(0, 19));
     formData.append("Contact", contact);
+    if (btnClose instanceof HTMLButtonElement) {
+        btnClose.disabled = true;
+        btnClose.classList.add("w3-disabled");
+    }
+    btnSubmit.disabled = true;
     btnSubmit.classList.add("w3-disabled");
     btnSubmit.innerHTML = btnSubmit.innerHTML.replace("Send Message", "Sending message...");
 
@@ -240,20 +312,29 @@ async function sendMessage(event) {
         });
         if (!response.ok) {
             const data = await response.text();
-            const error = data ? `\n${data}` : '';
+            const error = data ? `\n${data}` : "";
             // console.log(data);
             throw new Error(`Failed to get a successful response from endpoint with: ${response.status} ${response.statusText}. ${error}`);
         }
 
         if (btnClose instanceof HTMLButtonElement) {
+            btnClose.disabled = false;
+            btnClose.classList.remove("w3-disabled");
             btnClose.click();
         }
         form.reset();
+
     } catch (error) {
-        error.message = `Error processing the '/messages/send' endpoint: ${error.message} \nTry again later or report this issue to the admin.`;
+        error.message = `Frontend: Error processing the '/messages/send' endpoint: ${error.message} \nTry again later or report this issue to the admin.`;
         console.error(error);
         alert(`${error.message}`);
+
     } finally {
+        if (btnClose instanceof HTMLButtonElement) {
+            btnClose.disabled = false;
+            btnClose.classList.remove("w3-disabled");
+        }
+        btnSubmit.disabled = false;
         btnSubmit.classList.remove("w3-disabled");
         btnSubmit.innerHTML = btnSubmit.innerHTML.replace("Sending message...", "Send Message");
     }
@@ -289,7 +370,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Remove 'active' class from all nav links
+                // Remove "active" class from all nav links
                 navBarLinks.forEach(item => item.classList.remove("w3-theme-gradient"));
                 navBlockLinks.forEach(item => item.classList.remove("w3-theme-gradient"));
 
@@ -298,7 +379,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const navBarLink = document.querySelector(`div#navBar a[href="#${id}"]`);
                 const navBlockLink = document.querySelector(`div#navBlock a[href="#${id}"]`);
 
-                // Add 'active' class to the corresponding nav link
+                // Add "active" class to the corresponding nav link
                 navBarLink?.classList.add("w3-theme-gradient");
                 navBlockLink?.classList.add("w3-theme-gradient");
             }
